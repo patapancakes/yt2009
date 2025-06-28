@@ -10,7 +10,7 @@ const child_process = require("child_process")
 
 module.exports = function(file_path, callback, colors, cropSide) {
     let command = [
-        `magick convert`,
+        `convert`,
         `"${file_path}${cropSide ? "[1]" : ""}"`,
         `+dither -colors ${colors || 32}`,
         `-define histogram:unique-colors=true`,
@@ -35,7 +35,7 @@ module.exports = function(file_path, callback, colors, cropSide) {
 ===========
 
 WARN: failed to find the channel's dominant color!
-this is most likely an issue with \`magick\` not
+this is most likely an issue with \`convert\` not
 set up properly.
 
 ===========`)
