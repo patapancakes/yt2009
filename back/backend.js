@@ -1256,7 +1256,7 @@ app.get("/generate_gradient", (req, res) => {
     } else {
         // generate
         let generateCommand = [
-            "magick",
+            "convert",
             "-size 1x25",
             `gradient:"#ffffff"-"#${color}"`,
             `"${__dirname}/../player-imgs/embed-bgs/user-gen/${color}.png"`
