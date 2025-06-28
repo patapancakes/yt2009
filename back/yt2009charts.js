@@ -128,7 +128,7 @@ module.exports = {
 
         // generate command
         let command = [
-            `magick -size ${size[0]}x${size[1]} xc:${bg} -fill #333333`,
+            `convert -size ${size[0]}x${size[1]} xc:${bg} -fill #333333`,
             `-font Arial -pointsize 10`
         ]
 
@@ -462,7 +462,7 @@ module.exports = {
         }
 
         let command = [
-            "magick -size 440x220 xc:" + bg
+            "convert -size 440x220 xc:" + bg
         ]
 
         let chco = []

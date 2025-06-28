@@ -13,7 +13,7 @@ const child_process = require("child_process")
 module.exports = function(file_path) {
     let result = false;
     let command = [
-        "magick convert",
+        "convert",
         `"${file_path}"`,
         "+dither",
         "-colors 2",

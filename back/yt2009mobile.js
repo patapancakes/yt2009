@@ -1736,7 +1736,7 @@ module.exports = {
         } else if(fs.existsSync("../" + req.query.avatar)) {
             let start = `${__dirname.split("\\").join("/")}/..`
             let command = [
-                "magick -size 122x122 xc: ",
+                "convert -size 122x122 xc: ",
                 `-draw "image over 25,25 72,72 '${start}${req.query.avatar}'"`,
                 `"${start}${target}"`
             ].join(" ")
